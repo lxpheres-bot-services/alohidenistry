@@ -38,7 +38,5 @@ client.on("ready", async () => {
 	let commandfile = client.commands.get(cmd.slice(prefix.length));
 	if (commandfile) commandfile.run(client,message,args);
 	
-	}
-});
-
+);
 client.login(process.env.BOT_T0KEN);
