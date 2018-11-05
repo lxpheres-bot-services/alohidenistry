@@ -2,8 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-    const allowedid = ['290111320857116672','293060399106883584'];
-    if (allowedid.includes(message.author.id)) {
+    if (!message.member.roles.get("509142932968701952")) return message.reply("Invalid permissons! You must have the `Bot Permission` role."){
 	    let olduser = bot.user.username;
 	    let newuser = args.join(" ");
 	    bot.user.setUsername(args.join(" ")).then(() => {message.reply(`New username set to **${args.join(" ")}**!`); bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`My username has been changed from **${olduser}** to **${newuser}** by **${message.author.tag}**.`)})
