@@ -16,6 +16,6 @@ module.exports.help = {
 	usage: "setname <username>",
 	description: "nil",
 	longdes: "Changes the bot username to what is sent.",
-	mentionedperm: "DEVELOPER",
-  category: "Developer"
+	mentionedperm: "Bot Permission",
+  category: "Utility"
 }
