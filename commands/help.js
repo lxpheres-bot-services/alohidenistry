@@ -79,7 +79,7 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "`;warn` - Warns the member mentioned in the command. \n`;purge` - Deletes the amount of messages provided. \n`;kick` - Kicks mentioned user in the specific guild command was ran in. \n`;ban` - Bans mentioned user in the specific guild command was ran in. \n`;nick` - Sets the nickname for the desired user given."
+        value: "**Coming Soon!**"
       },
       {
         name: "Utility",
