@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const fs = require("fs")
+
 client.commands = new Discord.Collection();
 
 fs.readdir("./commands", (err, files) => {
@@ -22,21 +23,22 @@ fs.readdir("./commands", (err, files) => {
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
 });
+
+client.on("message", async message => {
+
+	if (message.author.bot) return;
+
+	let prefix = ";";
 	
-	const prefixes = ['!!'];
-	let prefix = false;
-  	for(const thisPrefix of prefixes) {
-    		if(message.content.startsWith(thisPrefix)) prefix = thisPrefix;
-  	}
+	if(message.content.indexOf(prefix) !== 0) return;
+	
 	
 	let messageArray = message.content.split(" ");
 	let cmd = messageArray.shift();
 	let args = messageArray
-	
-	if(!prefix) return;
-		
+
 	let commandfile = client.commands.get(cmd.slice(prefix.length));
 	if (commandfile) commandfile.run(client,message,args);
-	
-);
+});
+
 client.login(process.env.BOT_T0KEN);
