@@ -79,7 +79,7 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "**Coming Soon!**"
+        value: "`;ban` - Bans the user given."
       },
       {
         name: "Utility",
