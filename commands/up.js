@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
     let minutes = Math.floor((totalSeconds / 60) % 60);
     let seconds = Math.round(totalSeconds % 60);
     
-    let up = `${weeks}w ${days}d ${hours}h ${minutes}m ${seconds}s`;
+    let up = `${days}d ${hours}h ${minutes}m ${seconds}s`;
     message.channel.send({embed: {
     color: 15158332,
     author: {
