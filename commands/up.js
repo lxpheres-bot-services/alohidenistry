@@ -22,7 +22,7 @@ module.exports.run = async (bot, message, args) => {
     title: "\n",
     description: "\n",
     fields: [{
-        name: "Dart Bot's Uptime",
+        name: "Creamy'z Cafe Bot Uptime",
         value: up,
         inline: true
       },
@@ -40,7 +40,7 @@ module.exports.help = {
 	name: "up",
 	usage: "up",
 	description: "nil",
-	longdes: "Uptime of bot.",
+	longdes: "The amount of time the bot has been up.",
 	mentionedperm: "None",
   category: "Utility"
 }
