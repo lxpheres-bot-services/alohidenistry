@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
     let totalSeconds = process.uptime();
     let realTotalSecs = Math.floor(totalSeconds % 60);
     let days = Math.floor((totalSeconds % 31536000) / 86400);
-    let hours = Math.floor((totalSeconds / 3600 % 24);
+    let hours = Math.floor((totalSeconds / 3600) % 24);
     let minutes = Math.floor((totalSeconds / 60) % 60);
     let seconds = Math.round(totalSeconds % 60);
     
