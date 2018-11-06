@@ -1,1 +1,1 @@
-rbx login
+ rbx.login("CreamyzRanking", process.env.rblx);
