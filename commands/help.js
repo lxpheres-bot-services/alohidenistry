@@ -79,7 +79,7 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "`;ban` - Bans the user given."
+        value: "`;ban` - Bans the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
       },
       {
         name: "Utility",
@@ -119,7 +119,7 @@ message.author.send({embed: {
       },
       {
         name: "Commands",
-        value: "\n`;eval` - Evals code. \n`;setname` - Set the bot's username. \n`;reboot` - Restarts the bot."
+        value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
       },
     ],
     timestamp: new Date(),
