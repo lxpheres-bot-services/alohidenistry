@@ -2,6 +2,7 @@ const Discord = require("discord.js");
 const client = new Discord.Client();
 
 const fs = require("fs")
+const rbx = require("noblox.js");
 
 client.commands = new Discord.Collection();
 
@@ -22,6 +23,7 @@ fs.readdir("./commands", (err, files) => {
 
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
+	 rbx.login("CreamyzRanking", process.env.rblx);
 });
 
 client.on("message", async message => {
