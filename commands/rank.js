@@ -1,6 +1,5 @@
 var rbx = require("./noblox.js");
-module.exports = {
-	run: async (bot, message, args) => {
+exports.run = async (bot, message, args) => {
 		if (!message.member.roles.get("509497944043552768")) return message.reply("Invalid permissons! You must have the `Bot Admin` role.").
 		if (!args[1]) return message.channel.send("Usage: `;rank (username) (rank)`");
 		rbx.getRoles(3008227).then((roles) => {
