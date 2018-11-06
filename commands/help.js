@@ -79,11 +79,11 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "`;ban` - Bans the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
+        value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
       },
       {
         name: "Utility",
-        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu."
+        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running."
       },
       {
         name: "Developer Commands",
