@@ -68,7 +68,7 @@ if (command && `../commands/` + command + `.js`) {
     }
   }
 });})
-} else {message.channel.send("I sent a direct message of the help menu! If you did not get it, enable `Direct Messages from Server Members` and try again.");
+} else {message.channel.send("I sent a direct message to you of the help menu! If you did not get it, please try enabling `Direct Messages from Server Members` and try again!");
 message.author.send({embed: {
     color: 1752220,
     author: {
