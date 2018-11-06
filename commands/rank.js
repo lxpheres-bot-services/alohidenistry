@@ -8,7 +8,7 @@ module.exports = {
 				rbx.getRankInGroup(3008227, result).then((currentRank) => {
 					if (currentRank === 0) return message.reply("This person isn't in the group!");
 					var rank = args.splice(1, args.length).join(" ");
-					if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
+					if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!");
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Vice President").Rank || currentRank > roles.find((role) => role.Name === "Vice President").Rank) return message.reply("You cannot change the rank of a Vice President+ or rank anyone above Vice President.");
 					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(() => {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``);
