@@ -25,8 +25,3 @@ module.exports.run = async (bot, message, args) => {
 			message.reply("Couldn't fetch group ranks.").catch(() => bot.safeSend(message, module.exports.help.name));
 		});
 	},
-help: {
-		name: "rank",
-		category: "Group Administration"
-	}
-};
