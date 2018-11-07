@@ -25,11 +25,8 @@ module.exports = {
 			message.reply("Couldn't fetch group ranks.").catch(() => bot.safeSend(message, module.exports.help.name));
 		});
 	},
-module.exports.help = {
-name: "rank",
-usage: "rank",
-description: "Ranks a user in the group.",
-longdes: "Ranks a user in the group.",
-mentionedperm: "Bot Admin Role",
-category: "Utility"
-}
+help: {
+		name: "rank",
+		category: "Group Administration"
+	}
+};
