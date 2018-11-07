@@ -11,7 +11,7 @@ module.exports.run = async (bot, message, args) => {
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Vice President").Rank || currentRank > roles.find((role) => role.Name === "Vice President").Rank) return message.reply("You cannot change the rank of a President+, or rank anyone above President.").catch(() => bot.safeSend(message, module.exports.help.name));
 					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
-						await bot.channels.get('506303108998234133').send(`Since ${message.author.tag} requested so, I have ranked \`${args[0]}\` to \`${rank}\``)
+						await bot.channels.get('506303108998234133').send(`Alert! Since ${message.author.tag} requested, I have ranked \`${args[0]}\` to \`${rank}\`!`)
 					}).catch(() => {
 						 message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
 					});
