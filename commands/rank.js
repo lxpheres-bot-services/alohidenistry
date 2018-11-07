@@ -30,6 +30,6 @@ module.exports.help = {
 	usage: "rank <user> [rank]",
 	description: "nil",
 	longdes: "Ranks the user given.",
-	mentionedperm: "Bot Permissions!",
+	mentionedperm: "Bot Permissions Role",
   category: "Utility"
 };
