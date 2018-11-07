@@ -12,6 +12,7 @@ module.exports = {
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Vice President").Rank || currentRank > roles.find((role) => role.Name === "Vice President").Rank) return message.reply("You cannot change the rank of a President+, or rank anyone above President.").catch(() => bot.safeSend(message, module.exports.help.name));
 					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(() => {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
+						await bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`I have Ranked \`${args[0]}\` to \`${rank}\``, because ${message.author.tag} requested so.`).catch(() => bot.safeSend(message, module.exports.help.name));
 					}).catch(() => {
 						message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
 					});
