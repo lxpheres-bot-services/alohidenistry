@@ -14,7 +14,7 @@ module.exports = {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 						bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`Since ${message.author.tag} requested so, I have ranked \`${args[0]}\` to \`${rank}\```)
 					}).catch(() => {
-						message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
+						await message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
 					});
 				}).catch(() => {
 					message.reply("Couldn't fetch this user's rank.").catch(() => bot.safeSend(message, module.exports.help.name));
