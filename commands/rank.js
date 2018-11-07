@@ -10,7 +10,7 @@ module.exports = {
 					var rank = args.splice(1, args.length).join(" ");
 					if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Vice President").Rank || currentRank > roles.find((role) => role.Name === "Vice President").Rank) return message.reply("You cannot change the rank of a President+, or rank anyone above President.").catch(() => bot.safeSend(message, module.exports.help.name));
-					rbx.setRank(4034813, result, roles.find((role) => role.Name === rank).Rank).then(() => {
+					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(() => {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 					}).catch(() => {
 						message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
