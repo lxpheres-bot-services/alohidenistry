@@ -24,7 +24,7 @@ fs.readdir("./commands", (err, files) => {
 
 client.on("ready", async () => {
 	console.log(`${client.user.tag} has started!`);
-	 rbx.login("CreamyzRankingBot", process.env.rblx);
+	 rbx.login("CreamyzRankingBot", process.env.rbx);
 });
 
 client.on("message", async message => {
