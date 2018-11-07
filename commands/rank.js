@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 					var rank = args.splice(1, args.length).join(" ");
 					if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Vice President").Rank || currentRank > roles.find((role) => role.Name === "Vice President").Rank) return message.reply("You cannot change the rank of a President+, or rank anyone above President.").catch(() => bot.safeSend(message, module.exports.help.name));
-					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(() => {
+					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
 						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 						await bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`Since ${message.author.tag} requested so, I have ranked \`${args[0]}\` to \`${rank}\```)
 					}).catch(() => {
