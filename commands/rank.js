@@ -23,4 +23,13 @@ module.exports.run = async (bot, message, args) => {
 			});
 		}).catch(() => {
 			message.reply("Couldn't fetch group ranks.").catch(() => bot.safeSend(message, module.exports.help.name));
+		});
 	},
+module.exports.help = {
+	name: "rank",
+	usage: "rank <user> [rank]",
+	description: "nil",
+	longdes: "Ranks the user given.",
+	mentionedperm: "Bot Permissions!",
+  category: "Utility"
+};
