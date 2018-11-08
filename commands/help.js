@@ -79,15 +79,15 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
+        value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given. \n`;unban` - Unbans the member given."
       },
       {
         name: "Utility",
-        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running."
+        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;rank` - Ranks the user given in the roblox group."
       },
       {
         name: "Developer Commands",
-        value: "Developer commands are not shown to the public right now."
+        value: "Shown in the next embed."
       },
       {
         name: "Command Descriptions",
@@ -101,10 +101,6 @@ message.author.send({embed: {
     }
   }
 });
-       
- const allowedid = ['293060399106883584'];
-	
- if (allowedid.includes(message.author.id)) {
  message.author.send({embed: {
     color: 15844367,
     author: {
@@ -112,7 +108,7 @@ message.author.send({embed: {
       icon_url: bot.user.avatarURL
     },
     title: "Developer",
-    description: "You can see this because you are a developer of the bot.",
+    description: "Developer Commands.",
     fields: [{
         name: "Nil",
         value: "Nothing set to be here yet."
