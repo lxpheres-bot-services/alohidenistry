@@ -79,15 +79,15 @@ message.author.send({embed: {
     description: "Commands for Creamy'z Cafe Bot",
     fields: [{
         name: "Moderation",
-        value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given. \n`;unban` - Unbans the member given."
+        value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
       },
       {
         name: "Utility",
-        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;rank` - Ranks the user given in the roblox group."
+        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running."
       },
       {
         name: "Developer Commands",
-        value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
+        value: "Developer commands are not shown to the public right now."
       },
       {
         name: "Command Descriptions",
@@ -98,8 +98,11 @@ message.author.send({embed: {
     footer: {
       icon_url: bot.user.avatarURL,
       text: "By Lxphere"
+    }
+  }
+});
 	
-},
+}
 
 module.exports.help = {
 	name: "help",
