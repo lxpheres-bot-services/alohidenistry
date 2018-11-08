@@ -98,11 +98,11 @@ message.author.send({embed: {
     footer: {
       icon_url: bot.user.avatarURL,
       text: "By Lxphere"
-    }
+ }
   }
-});
-
-
+});}}
+	
+}
 module.exports.help = {
 	name: "help",
 	usage: "help [command]",
