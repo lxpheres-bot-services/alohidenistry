@@ -17,7 +17,7 @@ module.exports.run = async (bot, message, args) => {
     await member.kick(reason)
       .catch(error => message.reply(`Sorry ${message.author}, I couldn't kick because of : ${error}`));
     message.reply(`${member.user.tag} has been kicked by ${message.author.tag} because: ${reason}`);
-     await bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`**${member.user.tag}** has been kicked by ${message.author.tag} because of: **${reason}**.`)
+     await bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`:Kick: **${member.user.tag}** has been kicked by ${message.author.tag} because of: **${reason}**.`)
 }
 
 module.exports.help = {
