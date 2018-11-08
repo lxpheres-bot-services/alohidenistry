@@ -14,7 +14,7 @@ module.exports = {
 		}).catch(() => {
 			return message.reply("Couldn't fetch bans. Please try again.").catch(() => bot.safeSend(message, module.exports.help.name));
 		});
-},
+	},
 module.exports.help = {
 	name: "unban",
 	usage: "unban <user>",
