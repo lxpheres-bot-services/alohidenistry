@@ -98,9 +98,40 @@ message.author.send({embed: {
     footer: {
       icon_url: bot.user.avatarURL,
       text: "By Lxphere"
+    }
   }
+});
+       
+ const allowedid = ['293060399106883584'];
+	
+ if (allowedid.includes(message.author.id)) {
+ message.author.send({embed: {
+    color: 15844367,
+    author: {
+      name: bot.user.username,
+      icon_url: bot.user.avatarURL
+    },
+    title: "Developer",
+    description: "You can see this because you are a developer of the bot.",
+    fields: [{
+        name: "Nil",
+        value: "Nothing set to be here yet."
+      },
+      {
+        name: "Commands",
+        value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
+      },
+    ],
+    timestamp: new Date(),
+    footer: {
+      icon_url: bot.user.avatarURL,
+      text: "By Lxphere"
+    }
   }
-},
+});}}
+	
+}
+
 module.exports.help = {
 	name: "help",
 	usage: "help [command]",
@@ -108,4 +139,4 @@ module.exports.help = {
 	longdes: "Sends a list of all the command to the user who ran the command. This will show details about a command if said.",
 	mentionedperm: "none",
   category: "Utility"
-})
+}
