@@ -100,7 +100,7 @@ message.author.send({embed: {
       text: "By Lxphere"
  }
   }
-});}}
+});
 	
 }
 module.exports.help = {
