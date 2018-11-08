@@ -126,7 +126,7 @@ message.author.send({embed: {
   }
 });}}
 	
-}
+},
 
 module.exports.help = {
 	name: "help",
