@@ -87,7 +87,7 @@ message.author.send({embed: {
       },
       {
         name: "Developer Commands",
-        value: "Shown in the next embed."
+        value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
       },
       {
         name: "Command Descriptions",
@@ -98,33 +98,6 @@ message.author.send({embed: {
     footer: {
       icon_url: bot.user.avatarURL,
       text: "By Lxphere"
-    }
-  }
-});
- message.author.send({embed: {
-    color: 15844367,
-    author: {
-      name: bot.user.username,
-      icon_url: bot.user.avatarURL
-    },
-    title: "Developer",
-    description: "Developer Commands.",
-    fields: [{
-        name: "Nil",
-        value: "Nothing set to be here yet."
-      },
-      {
-        name: "Commands",
-        value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
-      },
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: bot.user.avatarURL,
-      text: "By Lxphere"
-    }
-  }
-});}}
 	
 },
 
