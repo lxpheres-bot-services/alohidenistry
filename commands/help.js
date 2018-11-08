@@ -108,4 +108,4 @@ module.exports.help = {
 	longdes: "Sends a list of all the command to the user who ran the command. This will show details about a command if said.",
 	mentionedperm: "none",
   category: "Utility"
-}
+})
