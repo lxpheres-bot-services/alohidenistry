@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 			var user = bans.find((m) => m.id === args[0] || m.tag === args[0]);
 			message.guild.unban(user, `Unbanned by ${message.author.tag}`).then(async () => {
 				message.reply(`Successfully unbanned \`${user.tag}\`.`).catch(() => bot.safeSend(message, module.exports.help.name));
-        await bot.channels.get('506303108998234133').send(`${message.author.tag} has revoked the ban for \`${user.tag}\`!`)
+        await bot.channels.get('506303108998234133').send(`:Unban: ${message.author.tag} has revoked the ban for \`${user.tag}\`!`)
 			}).catch(() => {
 				return message.reply(`Failed to unban \`${user.tag}\`.`).catch(() => bot.safeSend(message, module.exports.help.name));
 			});
