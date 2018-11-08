@@ -1,5 +1,4 @@
-module.exports = {
-	run: async (bot, message, args) => {
+module.exports.run = async (bot, message, args) => {
 		if (!message.member.hasPermission("BAN_MEMBERS")) return message.reply("Invalid permissons! You must have the `BAN_MEMBERS` permission.").catch(() => bot.safeSend(message, module.exports.help.name));
 		if (!args[0] && !message.mentions.members.first()) return message.reply("Usage: `;unban user#1010`").catch(() => bot.safeSend(message, module.exports.help.name));
 		message.guild.fetchBans().then((bans) => {
