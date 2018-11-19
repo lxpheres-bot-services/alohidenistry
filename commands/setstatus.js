@@ -2,7 +2,6 @@ const Discord = require("discord.js");
 const fs = require("fs"); 
 
 module.exports.run = async (bot, client, response, args) => {
-  message = response;
   const allowedid = ['293060399106883584'];
    if (allowedid.includes(message.author.id)) {
 	if (!args[1]) return response.reply("Usage: `+setstatus (status: online, idle, invisible, dnd) (type: playing, listening, watching) (description)`");
