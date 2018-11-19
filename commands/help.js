@@ -83,7 +83,7 @@ message.author.send({embed: {
       },
       {
         name: "Utility",
-        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running."
+        value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;say` - Sends a message as a bot."
       },
       {
         name: "Developer Commands",
