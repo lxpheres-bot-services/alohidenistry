@@ -16,6 +16,6 @@ module.exports.help = {
   usage: "setstatus (status: online, idle, invisible, dnd) (type: playing, listening, watching) (description)",
   description: "nil",
   longdes: "Set the bot's status.",
-  mentionedperm: "DEV",
-  category: "DEV"
+  mentionedperm: "Developer",
+  category: "Developer"
 }
