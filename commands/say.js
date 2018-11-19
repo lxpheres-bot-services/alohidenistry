@@ -2,11 +2,11 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-    if (message.member.hasPermission("MANAGE_SERVER")) {
+    if (message.member.hasPermission("MANAGE_MESSAGES")) {
       const sayMessage = args.join(" ");
       message.channel.send(sayMessage);
       message.delete();
-    } else {message.reply("Error! You do not have permission to use this command! You need the `MANAGE_SERVER` permission!")}
+    } else {message.reply("Error! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
 }
 
 module.exports.help = {
@@ -14,6 +14,6 @@ module.exports.help = {
 	usage: "say <message>",
 	description: "Sends the message as a bot.",
 	longdes: "Sends the message given in the command as the bot.",
-	mentionedperm: "MANAGE_SERVER",
+	mentionedperm: "MANAGE_MESSAGES",
   category: "Utility"
 }
