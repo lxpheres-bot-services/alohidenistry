@@ -23,7 +23,7 @@ fs.readdir("./commands", (err, files) => {
 });
 
 client.on("ready", async () => {
-	client.user.setPresence({ game: { type: 0, name: "To ;help!" }, status: "online" });
+	client.user.setPresence({ game: { type: 2, name: "To ;help!" }, status: "online" });
 	console.log(`${client.user.tag} has started!`);
 	rbx.login({ username: 'CreamyzRankingBot', password: process.env.rblx});
 });
