@@ -37,9 +37,9 @@ exports.log = function (title, message, response) {
 }
 
 exports.mlog = function (cha,title, message, response) {
-  let logcolor = "#ff0000";
+  let logcolor = "#b9efff";
   
-  if (title === "Message Edited") logcolor = "#fff247";
+  if (title === "Message Edited") logcolor = "#8df09f";
   const embed = new discord.RichEmbed()
   .setTitle(title)
   .setDescription(message)
@@ -49,7 +49,7 @@ exports.mlog = function (cha,title, message, response) {
 }
 
 exports.mbulklog = function (cha,title, message, response, collection) {
-  let logcolor = "#ff0000";
+  let logcolor = "#b9efff";
   
   const embed = new discord.RichEmbed()
   .setTitle(title)
