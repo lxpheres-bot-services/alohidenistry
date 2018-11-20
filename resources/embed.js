@@ -56,7 +56,5 @@ exports.mbulklog = function (cha,title, message, response, collection) {
   .setDescription(message)
   .setColor(logcolor)
   
-  response.guild.channels.get(cha.id).send({embed})
-  
   response.guild.channels.get(cha.id).send(new discord.RichEmbed().setColor(logcolor).setTitle("Deleted Messages").setDescription(collection.map((x, y) => (', \n'), {split: {char: ' '}})))
 }
