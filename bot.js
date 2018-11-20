@@ -28,6 +28,15 @@ client.on("ready", async () => {
 	rbx.login({ username: 'CreamyzRankingBot', password: process.env.rblx});
 });
 
+client.on('guildMemberAdd', member => {
+  // Send the message to a designated channel on a server:
+  const channel = member.guild.channels.find('name', 'bot-logs');
+  // Do nothing if the channel wasn't found on this server
+  if (!channel) return;
+  // Send the message, mentioning the member
+  channel.send(`Welcome to the server, ${member}`);
+});
+
 client.on("message", async message => {
 
 	if (message.author.bot) return;
