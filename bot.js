@@ -31,15 +31,8 @@ client.on("ready", async () => {
 client.on('guildMemberAdd', member => {
   const channel = member.guild.channels.find('name', 'member-logs');
   if (!channel) return;
-  const embed = new Discord.RichEmbed()
-  .setTitle("Member Joined")
-  .setDescription("\n")
-  .addField("", `Welcome to **Creamy'z Cafe | Offical Server**, ${member.user.tag}!)
-  .setColor("#ff0000");
-   message.channel.send({embed})
-}
+  channel.send(`Welcome to **Creamy'z Cafe | Offical Server**, ${member.user.tag}! :smile:`);
 });
-	  
 client.on('guildMemberRemove', member => {
   const channel = member.guild.channels.find('name', 'member-logs');
   if (!channel) return;
