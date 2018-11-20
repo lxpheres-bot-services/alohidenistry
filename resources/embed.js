@@ -50,7 +50,7 @@ exports.mlog = function (cha,title, message, response) {
 
 exports.mbulklog = function (cha,title, message, response, collection) {
   let logcolor = "#ca6cff";
-  
+  if (title === "Messages Deleted") logcolor = "#8df09f";
   const embed = new discord.RichEmbed()
   .setTitle(title)
   .setDescription(message)
