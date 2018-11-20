@@ -26,5 +26,16 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
+};    
+
+module.exports.help = {
+    name: "greeting",
+    usage: "N/A",
+    description: "Greets new members!",
+    longdes: "Greeting.",
+    mentionedperm: "BOT",
+  category: "BOT"
+}
+
 // lel
 client.login(process.env.BOT_T0KEN);
