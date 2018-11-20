@@ -8,7 +8,7 @@ module.exports.run = async (bot, message, args) => {
   message.channel.bulkDelete(newcount).then(() => {
   message.channel.send(`Deleted **${count}** messages!`).then(msg => msg.delete(3000));
 });
-  } else {message.reply("\nError! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
+  } else {message.reply("Error! You do not have permission to use this command! You need the `MANAGE_MESSAGES` permission!")}
 }
 
 module.exports.help = {
