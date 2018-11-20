@@ -49,7 +49,7 @@ exports.mlog = function (cha,title, message, response) {
 }
 
 exports.mbulklog = function (cha,title, message, response, collection) {
-  let logcolor = "#b9efff";
+  let logcolor = "#ca6cff";
   
   const embed = new discord.RichEmbed()
   .setTitle(title)
