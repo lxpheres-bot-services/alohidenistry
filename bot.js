@@ -39,7 +39,7 @@ client.on('guildMemberRemove', member => {
   channel.send(`${member.user.tag} has left the server! :slight_frown:`);
 });
 client.on("messageDelete", async message => { if (message.author.bot) return;
-	let cha = message.guild.channels.find("name", "message-logs");
+	let cha = message.guild.channels.find("name", "mod-logs");
 	
 	if (!cha) return;
 	
@@ -47,7 +47,7 @@ client.on("messageDelete", async message => { if (message.author.bot) return;
 })
 
 client.on("messageDeleteBulk", async messages => {
-	let cha = messages.array()[0].guild.channels.find("name", "message-logs");
+	let cha = messages.array()[0].guild.channels.find("name", "mod-logs");
 	
 	if (!cha) return;
 	
@@ -55,7 +55,7 @@ client.on("messageDeleteBulk", async messages => {
 })
 
 client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
-	let cha = message.guild.channels.find("name", "message-logs");
+	let cha = message.guild.channels.find("name", "mod-logs");
 	
 	if (!cha) return;
 	
