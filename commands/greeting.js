@@ -26,7 +26,7 @@ client.on('guildMemberAdd', member => {
   channel.send(`Welcome to the server, ${member}`);
 });
 
-};    
+}  
 
 module.exports.help = {
     name: "greeting",
