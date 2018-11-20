@@ -29,9 +29,14 @@ client.on("ready", async () => {
 });
 
 client.on('guildMemberAdd', member => {
-  const channel = member.guild.channels.find('name', 'bot-logs');
+  const channel = member.guild.channels.find('name', 'member-logs');
   if (!channel) return;
   channel.send(`Welcome to **Creamy'z Cafe | Offical Server**, ${member.user.tag}!`);
+});
+client.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find('name', 'member-logs');
+  if (!channel) return;
+  channel.send(`Goodbye ${member.user.tag}, and thanks for joining **Creamy'z Cafe | Offical Server**!`);
 });
 
 client.on("message", async message => {
