@@ -51,7 +51,7 @@ client.on("messageDeleteBulk", async messages => {
 	
 	if (!cha) return;
 	
-	require('./resources/embed.js').mbulklog(cha, "Messages Deleted", "**" + messages.array().length + "** messages deleted in <#" + messages.array()[0].channel.id + ">" , messages.array()[1], messages)
+	require('./resources/embed.js').mbulklog(cha, "Messages Deleted", "**" + if (messages.length > 0) { + "** messages deleted in <#" + messages.array()[1].channel.id + ">" , messages.array()[1], messages)
 })
 
 client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
