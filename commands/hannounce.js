@@ -6,8 +6,7 @@ module.exports.run = async (bot, message, args) => {
 	let embed = new Discord.RichEmbed()
 		.setTitle("Server Announcement")
 		.setColor("#ffeb5c")
-		.setDescription("\n")
-		.addField("\n\n\n", args.join(" "))
+		.setDescription(args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
 	message.channel.send("@here", {embed: embed});
 }
