@@ -24,10 +24,10 @@ module.exports.run = async (bot, client, response, args) => {
       } else {
     if (matches.length === 0) response.reply("No roles were found with your query.");
     if (matches.length >= 2) {
-      const arr = matches.join(",\n");
+      const lol = matches.join(",\n");
       const embed = new Discord.RichEmbed()
       .setTitle(`${matches.length} roles were found:`)
-      .setDescription(arr)
+      .setDescription(lol)
       .setFooter("Please run the command again with a more specific term.")
       
       response.channel.send({embed})
