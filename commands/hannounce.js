@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
 	let embed = new Discord.RichEmbed()
 		.setTitle("Server Announcement")
-		.setColor("#3447003")
+		.setColor("#ffeb5c")
 		.setDescription("\n")
 		.addField("\n\n\n", args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
