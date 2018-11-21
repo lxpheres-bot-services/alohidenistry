@@ -6,7 +6,9 @@ module.exports.run = async (bot, client, response, args) => {
 	  let role = args.join(" ");
 	  if (!role) return response.reply("Please specify a role to view!");
     const roles = response.guild.roles.array();
-    const matches = roles.filter(role => role.name.toLowerCase().includes(args.join(" ").toLowerCase())) 
+    const argString = args.join('").toLowerCase();
+    const check = (role => role.name.includes(argString));
+    const matches = roles.filter(check);
           role = matches[0];
 	  if (matches.length === 1) {
 		  const embed = new Discord.RichEmbed()
