@@ -2,29 +2,15 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
-    message.channel.send("@here")
-    message.channel.send({embed: { 
-    color: 3447003,
-    author: {
-      name: bot.user.username,
-      icon_url: bot.user.avatarURL
-    },
-    title: "Server Announcement",
-    description: "\n",
-    fields: [{
-        name: "\n\n\n",
-        value: args.join(" ")
-	},
-    ],
-    timestamp: new Date(),
-    footer: {
-      icon_url: message.author.avatarURL,
-      text: "Announcement made by ${message.author.tag}"
-   }
- }
-}); message.delete();}
-	    
+	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
+	let embed = new Discord.RichEmbed()
+		.setTitle("Server Announcement")
+		.setColor("#3447003")
+		.setDescription("\n")
+		.addField("\n\n\n", args.join(" "))
+		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
+	message.channel.send("@here", {embed: embed});
+}
 module.exports.help = {
 	name: "hannounce",
 	usage: "hannounce <txt>",
