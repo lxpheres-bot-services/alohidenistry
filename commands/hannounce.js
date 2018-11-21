@@ -20,16 +20,16 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You 
     timestamp: new Date(),
     footer: {
       icon_url: message.author.avatarURL,
-      text: "Announce made by ${message.author.tag}"
+      text: "Announcement made by ${message.author.tag}"
    }
  }
 }); message.delete();}
 	    
 module.exports.help = {
-	name: "announce",
-	usage: "announce <txt>",
-	description: "Announcement command.",
-	longdes: "An announcement command.",
+	name: "hannounce",
+	usage: "hannounce <txt>",
+	description: "Announcement command using here.",
+	longdes: "An announcement command using here.",
 	mentionedperm: "MANAGE_ROLES",
         category: "Utility"
 }
