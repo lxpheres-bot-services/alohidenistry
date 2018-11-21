@@ -3,6 +3,7 @@ const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
 if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
+    message.channel.send("@here")
     message.channel.send({embed: {
     color: 3447003,
     author: {
