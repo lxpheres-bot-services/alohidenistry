@@ -13,14 +13,14 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You 
     title: "Server Announcement",
     description: "\n",
 	fields: [{
-        name: "@here",
+        name: "\n",
         value: args.join(" ")
 	},
     ],
     timestamp: new Date(),
     footer: {
-      icon_url: bot.user.avatarURL,
-      text: "\n"
+      icon_url: message.author.avatarURL,
+      text: "Announce made by ${message.author.tag}"
    }
  }
 }); message.delete();}
