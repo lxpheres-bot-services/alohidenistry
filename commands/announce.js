@@ -2,7 +2,8 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-	  message.channel.send({embed: {
+if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
+    message.channel.send({embed: {
     color: 3447003,
     author: {
       name: bot.user.username,
@@ -18,7 +19,7 @@ module.exports.run = async (bot, message, args) => {
     timestamp: new Date(),
     footer: {
       icon_url: bot.user.avatarURL,
-      text: "Embed key: announce"
+      text: "\n"
     }
   }
 module.exports.help = {
