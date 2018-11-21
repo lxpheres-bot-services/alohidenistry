@@ -22,10 +22,10 @@ module.exports.run = async (bot, message, args) => {
     }
   }
 module.exports.help = {
-	name: "sende",
-	usage: "sende <embed_key>",
-	description: "nil",
-	longdes: "Sends an embed. Use a key to get the type you want to send.",
-	mentionedperm: "DEVELOPER",
-  category: "Developer"
+	name: "announce",
+	usage: "announce <txt>",
+	description: "Announcement command.",
+	longdes: "An announcement command.",
+	mentionedperm: "MANAGE_ROLES",
+        category: "Utility"
 }
