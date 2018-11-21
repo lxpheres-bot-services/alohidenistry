@@ -8,7 +8,11 @@ module.exports.run = async (bot, message, args) => {
 		.setColor("#ffeb5c")
 		.setDescription(args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
-	message.channel.send("@here", {embed: embed});
+	bot.channels.get("503757930173300737").send("@here", {embed: embed}).then(() => {
+		message.reply("Message sent!");
+	}).catch(() => {
+		message.reply("Something went wrong when announcing, please check my permissions and try again.");
+	});
 }
 module.exports.help = {
 	name: "hannounce",
