@@ -20,8 +20,10 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You 
     footer: {
       icon_url: bot.user.avatarURL,
       text: "\n"
-    }
-  }
+   }
+ }
+}); message.delete();}
+	    
 module.exports.help = {
 	name: "announce",
 	usage: "announce <txt>",
