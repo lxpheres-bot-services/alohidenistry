@@ -12,7 +12,7 @@ if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You 
     },
     title: "Server Announcement",
     description: "\n",
-	fields: [{
+    fields: [{
         name: "\n\n\n",
         value: args.join(" ")
 	},
