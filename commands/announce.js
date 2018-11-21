@@ -10,8 +10,7 @@ module.exports.run = async (bot, message, args) => {
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
 	bot.channels.get("503757930173300737").send({embed: embed}).then(() => {
 		message.reply("Message sent!");
-	}).catch((e) => {
-		console.log(e);
+	}).catch(() => {
 		message.reply("Something went wrong when announcing, please check my permissions and try again.");
 	});
 }
