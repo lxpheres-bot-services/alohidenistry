@@ -1,19 +1,17 @@
 const Discord = require("discord.js");
 const fs = require("fs"); 
 
-module.exports.run = async (bot, message, args) => {
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("It doesn't look like you can use that!");
-	let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
-	if (!wUser) return message.reply("That member can't be found!");
-	if (wUser.hasPermission("MANAGE_MESSAGES") || wUser.hasPermission("ADMINISTRATOR")) return message.reply("Cannot warn that user! Check that I have sufficent permissions, or you have permission to warn that user!");
+module.exports.run = async (bot, client, response, args) => {
+	if (!response.member.hasPermission("MANAGE_MESSAGES")) return response.reply("It doesn't look like you can use that!");
+	let wUser = response.guild.member(response.mentions.users.first()) || response.guild.members.get(args[0]);
+	if (!wUser) return response.reply("That member can't be found!");
+	if (wUser.hasPermission("MANAGE_MESSAGES") || wUser.hasPermission("ADMINISTRATOR")) return response.reply("cannot warn that user! Check that I have sufficent permissions, or you have permission to warn that user!");
 	let reaso = args.shift();
 	let reason = args.join(" ");
-
 	if (!reason) {reason = "*No reason specified.*"}
-        message.channel.send(`**${message.author.username}** has warned <@${wUser.id}> because of **${reason}**.`);
-	wUser.send(`You have been warned in **${message.guild.name}** for **${reason}**.`);
-	await bot.guilds.get('503074702902689803').channels.get('506303108998234133').send(`:Warn: **${wUser.user.tag}** has been warned by ${message.author.tag} because of: **${reason}**.`)
-	
+  require('../resources/embed.js').log("Moderation Action - Warn", `**User:** ${wUser.user.tag} \n**Moderator:** ${response.author.tag} \n**Reason:** ${reason}`, response)
+	wUser.send(`Hey! You have been warned in **${response.guild.name}** because of **${reason}**.`);
+  response.channel.send(`Okay, **${wUser.user.tag}** was warned for '**${reason}**', ${response.author.username}.`);
 }
 
 module.exports.help = {
