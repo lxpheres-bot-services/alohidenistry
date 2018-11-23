@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
-    if (message.member.hasPermission("MANAGE_GUILD")) {
+    if (message.member.hasPermission("MANAGE_ROLES")) {
       const sayMessage = args.join(" ");
       message.channel.send(sayMessage);
       message.delete();
@@ -14,6 +14,6 @@ module.exports.help = {
 	usage: "say <message>",
 	description: "Sends the message as a bot.",
 	longdes: "Sends the message given in the command as the bot.",
-	mentionedperm: "MANAGE_GUILD",
+	mentionedperm: "MANAGE_ROLES",
   category: "Utility"
 }
