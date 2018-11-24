@@ -16,7 +16,7 @@ module.exports.run = async (bot, message, args) => {
     
    const wUser = member;
 	
-    await member.kick(reason).then( a => 
+    await member.kick(reason)
     require('../resources/embed.js').log("Moderation Action - Warn", `**User:** ${wUser.user.tag} \n**Moderator:** ${message.author.tag} \n**Reason:** ${reason}`, message)
     wUser.send(`Hey! You have been kicked from **${message.guild.name}** because of **${reason}**.`);
     message.channel.send(`Okay, ${wUser.user.tag} was kicked for ${reason}, ${message.author.username}.`);)
