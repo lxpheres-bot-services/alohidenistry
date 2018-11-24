@@ -10,8 +10,8 @@ module.exports.run = async (bot, message, args) => {
 					if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
 					if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Human Resources Officer").Rank || currentRank > roles.find((role) => role.Name === "Human Resources Officer").Rank) return message.reply("You cannot change the rank of a Human Resources Officer+, or rank anyone above Human Resources Officer").catch(() => bot.safeSend(message, module.exports.help.name));
 					rbx.setRank(3008227, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
-						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 						require('../resources/embed.js').log("Rank Action", `**User Ranked:** \`${args[0]}\` \n**Ranked By:* ${message.author.tag} \n**Ranked To:** \`${rank}\`)
+						message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 					}).catch(() => {
 						 message.reply("Couldn't rank this user in the group.").catch(() => bot.safeSend(message, module.exports.help.name));
 					});
