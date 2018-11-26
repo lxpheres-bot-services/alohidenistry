@@ -34,6 +34,6 @@ module.exports.help = {
 	usage: "sudo <user> <command> [args]",
 	description: "Force commands on a user",
 	longdes: "Forces a user to run a specific command.",
-	mentionedperm: "DEV",
-  category: "DEVELOPER"
+	mentionedperm: "Developer",
+  category: "Moderation"
 }
