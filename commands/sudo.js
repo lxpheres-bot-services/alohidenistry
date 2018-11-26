@@ -1,15 +1,13 @@
 const Discord = require("discord.js");
 const fs = require("fs"); 
-
 module.exports.run = async (bot, client, message, args) => {
-  const allowedid = ['293060399106883584'];
-  if (allowedid.includes(message.author.id)) {
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) return message.reply("that member can't be found!");
 	let reaso = args.shift();
 	let reason = args.join(" ");
-	if (!reason) message.reply(You need a command to run!");
-  const command = reason;
+	if (!reason) message.reply(Command required to run!");
+ 
+const command = reason;
   
   
   const MessageCreator = require('../resources/mc.js');
