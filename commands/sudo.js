@@ -1,7 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs"); 
-const perm = ['293060399106883584'];
-     if (perm.includes(user.author.id)) {
+if (!message.member.roles.get("503232354408595456")) return message.reply("Invalid permissons! You must have the `Bot Admin` role.").catch(() => bot.safeSend(message, module.exports.help.name));
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) return message.reply("that member can't be found!");
 	let reaso = args.shift();
