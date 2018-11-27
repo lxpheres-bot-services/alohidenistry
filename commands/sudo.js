@@ -26,6 +26,7 @@ const command = reason;
   
   rc.shift();
   cf.run(client, client, m, rc);
+           });
 },
 module.exports.help = {
 	name: "sudo",
