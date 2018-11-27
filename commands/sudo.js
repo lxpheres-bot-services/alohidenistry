@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const fs = require("fs"); 
-module.exports.run = async (bot, client, message, args) => {
-  if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("Invalid permissions! You must be a server admin to use this command!");
+const allowedid = ['293060399106883584'];
+     if (allowedid.includes(message.author.id)) {
   let wUser = message.guild.member(message.mentions.users.first()) || message.guild.members.get(args[0]);
 	if (!wUser) return message.reply("that member can't be found!");
 	let reaso = args.shift();
