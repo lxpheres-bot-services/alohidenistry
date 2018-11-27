@@ -27,14 +27,13 @@ const command = reason;
   
   rc.shift();
   cf.run(client, client, m, rc);
-
-   }
 }
+
 module.exports.help = {
 	name: "sudo",
 	usage: "sudo <user> <command> [args]",
 	description: "Force commands on a user",
 	longdes: "Forces a user to run a specific command.",
 	mentionedperm: "Developer",
-  category: "Moderation"
+  category: "Utility"
 }
