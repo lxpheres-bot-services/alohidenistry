@@ -18,7 +18,7 @@ const command = reason;
 	
   m.reply = function(cont) { this.message.channel.send(m.author + ", " + cont) };
   
-  m.setAuthor(wUser.id)
+  m.setAuthor(${wUser.user.id})
   m.setContent(command)
   
   const rc = command.split(" ");
