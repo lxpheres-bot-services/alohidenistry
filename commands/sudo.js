@@ -35,4 +35,4 @@ module.exports.help = {
 	longdes: "Forces a user to run a specific command.",
 	mentionedperm: "Developer",
   category: "Utility"
-};
+}
