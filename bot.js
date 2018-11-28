@@ -69,6 +69,6 @@ module.exports.run = async () => {
 		if (commandfile) commandfile.run(client, message, args);
 	});
 
-	client.login(process.env.BOT_TOKEN);
+	client.login(process.env.BOT_T0KEN);
 };
 this.run();
