@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const fs = require("fs");
 
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
@@ -13,12 +12,12 @@ module.exports.run = async (bot, message, args) => {
 	}).catch(() => {
 		message.reply("Something went wrong when announcing, please check my permissions and try again.");
 	});
-}
+};
 module.exports.help = {
 	name: "announce",
 	usage: "announce <txt>",
 	description: "Announcement command, no ping.",
 	longdes: "An announcement command, with no ping.",
 	mentionedperm: "MANAGE_ROLES",
-        category: "Utility"
-}
+	category: "Utility"
+};
