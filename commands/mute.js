@@ -27,7 +27,7 @@ module.exports.run = async (bot, message, args) => {
 			}, ms(args[1]));
 		}).catch(() => {
 			message.reply("Couldn't mute this user, check my permissions and try again").catch(() => bot.safeSend(message, module.exports.help.name));
-		})
+		
 };
 module.exports.help = {
 	name: "mute",
