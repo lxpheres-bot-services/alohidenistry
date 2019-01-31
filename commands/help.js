@@ -81,11 +81,11 @@ module.exports.run = async (bot, message, args) => {
 				description: "Commands for Creamy'z Cafe Bot",
 				fields: [{
 					name: "Moderation",
-					value: "`;ban` - Bans the user given.  \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
+					value: "`;ban` - Bans the user given. \n `;unban` - Revokes a ban. \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
 				},
 				{
 					name: "Utility",
-					value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;say` - Sends a message as a bot."
+					value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;say` - Sends a message as a bot. \n`;announce` - Command used to announce events. \n`;hannounce` - Announcement with @here ping. \n`;eannounce` - Announcement with @everyone ping."
 				},
 				{
 					name: "Developer Commands",
@@ -104,7 +104,7 @@ module.exports.run = async (bot, message, args) => {
 			}
 		});
 
-		const allowedid = ["293060399106883584"];
+		const allowedid = ["509125802080600074"];
 
 		if (allowedid.includes(message.author.id)) {
 			message.author.send({
@@ -122,7 +122,7 @@ module.exports.run = async (bot, message, args) => {
 					},
 					{
 						name: "Commands",
-						value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username."
+						value: "`;reboot` - Restarts the bot. \n`;setname` - Sets the bots username. \n`;sudo` - Forces a command upon a user."
 					},
 					],
 					timestamp: new Date(),
