@@ -26,11 +26,6 @@ module.exports.run = async () => {
 		console.log(`${client.user.tag} has started!`);
 		//rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
 	});
-	client.on("ready", async () => {
-		if (message.channel.type !== "dm" && !message.author.bot) {
-		message.console.log
-	};
-
 	client.on("guildMemberAdd", (member) => {
 		const channel = member.guild.channels.find("name", "member-logs");
 		if (!channel) return;
