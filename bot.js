@@ -29,7 +29,7 @@ module.exports.run = async () => {
 	client.on("ready", async () => {
 		if (message.channel.type !== "dm" && !message.author.bot) {
 		message.console.log
-	});
+	};
 
 	client.on("guildMemberAdd", (member) => {
 		const channel = member.guild.channels.find("name", "member-logs");
