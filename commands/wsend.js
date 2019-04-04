@@ -4,6 +4,7 @@ module.exports.run = async (bot, message) => {
 		const eMessage = args.join(" ");
 		bot.guilds.get("559491866207453184").channels.get("559491866207453186").send(eMessage);
 		message.delete();
+		} else {message.reply("Error! You do not have permission to use this command! You need the `MANAGE_GUILD` permission!");}
 };
 
 module.exports.help = {
