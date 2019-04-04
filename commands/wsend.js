@@ -9,7 +9,7 @@ module.exports.run = async (bot, message, args) => {
 
 module.exports.help = {
 	name: "wsend",
-	usage: "esend",
+	usage: "wsend",
 	description: "Sends the message as a bot.",
 	longdes: "Sends the message given in the command as the bot.",
 	mentionedperm: "DEV",
