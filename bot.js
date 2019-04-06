@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 const fs = require("fs");
-const rbx = require("noblox.js");
+const noblox = require("noblox.js");
 module.exports.run = async () => {
 	const client = new Discord.Client({ disableEveryone: false, fetchAllMembers: true });
 
@@ -24,6 +24,7 @@ module.exports.run = async () => {
 	client.on("ready", async () => {
 		client.user.setPresence({ game: { type: 3, name: "Bervo Hotels! | ;help" }, status: "online" });
 		console.log(`${client.user.tag} has started!`);
+		await noblox.cookieLogin(process.env.roblox);
 		//rbx.login({ username: "CreamyzRankingBot", password: process.env.rblx});
 	});
 	client.on("guildMemberAdd", (member) => {
