@@ -1,5 +1,5 @@
 module.exports.run = async (bot, message, args) => {
-	if (message.member.hasPermission("MANAGE_ROLES")) {
+	if (message.member.hasPermission("BAN_MEMBERS")) {
 		const sayMessage = args.join(" ");
 		message.channel.send(sayMessage);
 		message.delete();
