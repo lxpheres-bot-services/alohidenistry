@@ -2,7 +2,7 @@ module.exports.run = async (bot, message, args) => {
 	const allowedid = ["293060399106883584"];
 	const sayMessage = args.join(" ");
 	if (allowedid.includes(message.author.id))
-		bot.guilds.get("559491866207453184").channels.get("559491866207453186").message.channel.send(sayMessage);
+		bot.guilds.get("569295622637879306").channels.get("559491866207453186").message.channel.send(sayMessage);
 		message.delete();
 };
 
