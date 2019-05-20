@@ -10,3 +10,12 @@ function makeid(length) {
 }
 
 console.log(makeid(10));
+
+module.exports.help = {
+	name: "generate",
+	usage: "generate,
+	description: "generator cmd",
+	longdes: "generator cmd",
+	mentionedperm: "DEVELOPER",
+	category: "Utility"
+};
