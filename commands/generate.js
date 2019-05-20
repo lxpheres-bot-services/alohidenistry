@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-module.exports.run = async (bot, message, args) => {
 function makeid(length) {
    var result           = 'PREMIUM-';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
