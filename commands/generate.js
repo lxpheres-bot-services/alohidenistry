@@ -13,7 +13,7 @@ console.log(makeid(10));
 
 module.exports.help = {
 	name: "generate",
-	usage: "generate,
+	usage: "generate",
 	description: "generator cmd",
 	longdes: "generator cmd",
 	mentionedperm: "DEVELOPER",
