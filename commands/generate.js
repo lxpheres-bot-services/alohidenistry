@@ -2,7 +2,7 @@ module.exports.run = async (bot, message) => {
 const Discord = require("discord.js");
 	const allowedid = ["293060399106883584"];
 	if (allowedid.includes(message.author.id)) {
-function makeid(length) {
+ function makeid(length) {
    var result           = 'PREMIUM-';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
    var charactersLength = characters.length;
@@ -11,8 +11,7 @@ function makeid(length) {
    }
    return result;
 }
-
-console.log(makeid(12));
+message.author.send(makeid(10));
 }
 module.exports.help = {
 	name: "generate",
