@@ -1,5 +1,4 @@
 const Discord = require("discord.js");
-const allowedid = ["293060399106883584"];
 function makeid(length) {
    var result           = 'PREMIUM-';
    var characters       = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
@@ -10,7 +9,7 @@ function makeid(length) {
    return result;
 }
 
-allowedid.send(makeid(10));
+message.user.send(makeid(10));
 
 module.exports.help = {
 	name: "generate",
