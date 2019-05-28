@@ -12,7 +12,7 @@ function makeid(length) {
    return result;
 }
 
-console.log(makeid(10));
+console.log(makeid(12));
 }
 module.exports.help = {
 	name: "generate",
