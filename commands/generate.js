@@ -11,6 +11,7 @@ const Discord = require("discord.js");
    return result;
 }
 message.author.send(makeid(10));
+message.channel.send("Sucessfully sent you a premium code!");
 }
 module.exports.help = {
 	name: "generate",
