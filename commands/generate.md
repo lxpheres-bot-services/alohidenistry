@@ -12,8 +12,8 @@ function makeid(length) {
    return result;
 }
 
-message.channel.send(makeid(10));
-
+console.log(makeid(10));
+}
 module.exports.help = {
 	name: "generate",
 	usage: "generate",
