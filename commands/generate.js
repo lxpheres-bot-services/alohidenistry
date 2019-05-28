@@ -9,7 +9,7 @@ function makeid(length) {
    return result;
 }
 
-console.log(makeid(10));
+message.author.send(makeid(10));
 
 module.exports.help = {
 	name: "generate",
