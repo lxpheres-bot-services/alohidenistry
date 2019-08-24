@@ -33,7 +33,7 @@ exports.log = function (title, message, response) {
 		.setDescription(message)
 		.setColor("#ffd400");
 
-	response.guild.channels.find("name", "mod-logs").send({embed});
+	response.guild.channels.find("name", "🍂┊thlogs").send({embed});
 };
 
 exports.mlog = function (cha, title, message, response) {
