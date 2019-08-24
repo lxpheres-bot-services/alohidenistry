@@ -6,7 +6,8 @@ module.exports.run = async (bot, message, args) => {
 		.setTitle("TH | Server Announcement")
 		.setColor("#ffeb5c")
 		.setDescription(args.join(" "))
-		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
+		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL)
+		.setThumbnail("https://cdn.discordapp.com/attachments/613900389137514515/614440651882364979/image0.png");
 	bot.channels.get("613900389137514515").send({embed: embed}).then(() => {
 		message.reply("Message sent!");
 	}).catch(() => {
