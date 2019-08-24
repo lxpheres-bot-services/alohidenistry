@@ -1,5 +1,4 @@
 module.exports.run = async (bot, message, args) => {
-const discord.js = require("discord.js")
 if (isCommand(message, "new")) {
         const reason = message.content.split(" ").slice(1).join(" ");
         if (!message.guild.roles.exists("name", "Support Staff")) return message.channel.send(`This server doesn't have a \`Support Staff\` role made, so the ticket won't be opened.\nIf you are an administrator, make one with that name exactly and give it to users that should be able to see tickets.`);
