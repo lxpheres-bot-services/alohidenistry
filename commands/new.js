@@ -13,14 +13,15 @@ if (!args[0]) {
             c.setParent(message.guild.channels.find(c => c.name.toLowerCase() === 'tickets').id)
         }
         c.overwritePermissions(message.guild.defaultRole, {
-            VIEW_CHANNEL: false
+            READ_MESSAGES: false
         })
         c.overwritePermissions(message.member, {
-            VIEW_CHANNEL: true
+            READ_MESSAGES: true
         })
         c.overwritePermissions(message.guild.roles.find(r => r.name.toLowerCase() === 'Support Staff'), {
-            VIEW_CHANNEL: true
+            READ_MESSAGES: true
         })
+	 
         message.delete();
 
     }
