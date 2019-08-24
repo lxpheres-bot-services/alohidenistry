@@ -37,20 +37,20 @@ module.exports.run = async () => {
 	//	if (!channel) return;
 	//	channel.send(`${member.user.tag} has left the server! :slight_frown:`);
 	// });
-	// client.on("messageDelete", async (message) => { if (message.author.bot) return;
-	//	let cha = message.guild.channels.find("name", "mod-logs");
+	 client.on("messageDelete", async (message) => { if (message.author.bot) return;
+		let cha = message.guild.channels.find("name", "🍂┊thlogs");
 
-	//	if (!cha) return;
+		if (!cha) return;
 
-	//	require("./resources/embed.js").mlog(cha, "Message Deleted", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Content__**: \n" + message.content, message);
-	// });
-	// client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
-	//	let cha = message.guild.channels.find("name", "mod-logs");
+		require("./resources/embed.js").mlog(cha, "Message Deleted", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Content__**: \n" + message.content, message);
+	 });
+	 client.on("messageUpdate", async (message, newmessage) => { if (newmessage.content === message.content) return; if (message.author.bot) return;
+		let cha = message.guild.channels.find("name", "🍂┊thlogs");
 
-	// if (!cha) return;
+	 if (!cha) return;
 	
-	//	require("./resources/embed.js").mlog(cha, "Message Edited", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Old Message:__**: \n" + message.content + "\n\n __**New Message**__ \n" + newmessage.content, message);
-	// });
+		require("./resources/embed.js").mlog(cha, "Message Edited", "Sent by **" + message.author.tag + "** (**" + message.author.id + "**) in <#" + message.channel.id + "> \n\n **__Old Message:__**: \n" + message.content + "\n\n __**New Message**__ \n" + newmessage.content, message);
+	 });
 
 	client.on("message", async (message) => {
 
