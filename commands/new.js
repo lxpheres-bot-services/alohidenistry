@@ -27,7 +27,7 @@ if (isCommand(message, "new")) {
                 embed: embed
             });
         }).catch(console.error); // Send errors to console
-    }
+    };
 
 module.exports.help = {
 	name: "ban",
