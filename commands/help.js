@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
 						icon_url: bot.user.avatarURL
 					},
 					title: "Commands",
-					description: "Commands for Creamy'z Cafe Bot",
+					description: "Commands for TH | Server Bot",
 					fields: [{
 						name: "Name",
 						value: props.help.name,
@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 					timestamp: new Date(),
 					footer: {
 						icon_url: bot.user.avatarURL,
-						text: "By Lxphere"
+						text: "TH | Server Bot"
 					}
 				}
 			});
@@ -78,7 +78,7 @@ module.exports.run = async (bot, message, args) => {
 					icon_url: bot.user.avatarURL
 				},
 				title: "Commands",
-				description: "Commands for Creamy'z Cafe Bot",
+				description: "Commands TH | Server Bot",
 				fields: [{
 					name: "Moderation",
 					value: "`;ban` - Bans the user given. \n `;unban` - Revokes a ban. \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
@@ -99,7 +99,7 @@ module.exports.run = async (bot, message, args) => {
 				timestamp: new Date(),
 				footer: {
 					icon_url: bot.user.avatarURL,
-					text: "By Lxphere"
+					text: "TH | Server Bot"
 				}
 			}
 		});
