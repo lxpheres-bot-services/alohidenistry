@@ -27,3 +27,11 @@ module.exports.run = async (bot, message, args) => {
             });
         }).catch(console.error); // Send errors to console
     };
+module.exports.help = {
+	name: "say",
+	usage: "say <message>",
+	description: "Sends the message as a bot.",
+	longdes: "Sends the message given in the command as the bot.",
+	mentionedperm: "MANAGE_ROLES",
+	category: "Utility"
+};
