@@ -1,3 +1,4 @@
+module.exports.run = async (bot, message, args) => {
 const discord.js = require("discord.js")
 if (isCommand(message, "new")) {
         const reason = message.content.split(" ").slice(1).join(" ");
