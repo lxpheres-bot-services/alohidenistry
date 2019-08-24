@@ -26,4 +26,4 @@ module.exports.run = async (bot, message, args) => {
                 embed: embed
             });
         }).catch(console.error); // Send errors to console
-    }};
+    };
