@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
 	let reason = args.join(" ");
 	if (!reason) {reason = "*No reason specified.*";}
 	require("../resources/embed.js").log("Moderation Action - Warn", `**User:** ${wUser.user.tag} \n**Moderator:** ${message.author.tag} \n**Reason:** ${reason}`, message);
-	wUser.send(`Hey! You have been warned in **${message.guild.name}** because of **${reason}**.`);
+	wUser.send(`Hey there! You have been warned in **${message.guild.name}** because of **${reason}**.`);
 	message.channel.send(`Okay, **${wUser.user.tag}** was warned for '**${reason}**', ${message.author.username}.`);
 };
 
