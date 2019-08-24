@@ -5,7 +5,7 @@ module.exports.run = async (bot, message, args) => {
     const fs = require('fs')
 if (!args[0]) {
     message.channel.send(new Discord.RichEmbed().setColor(Config.ticketcolor).setDescription('Your ticket has been created!\nStaff will contact you in the ticket shortly!').setTimestamp().setAuthor('Tickets'))
-    message.guild.createChannel(`ticket-${data.id}`).then(async c => {
+    message.guild.createChannel(`ticket-{message.member.username}`).then(async c => {
     if (message.guild.channels.find(c => c.name.toLowerCase() === 'TH | Tickets')) {
         if (message.guild.channels.find(c => c.name.toLowerCase() === 'TH | Tickets').type === 'category') {
             c.setParent(message.guild.channels.find(c => c.name.toLowerCase() === 'tickets').id)
