@@ -30,10 +30,10 @@ if (isCommand(message, "new")) {
     };
 
 module.exports.help = {
-	name: "ban",
-	usage: "ban <user> [reason]",
+	name: "newn",
+	usage: "new [reason]",
 	description: "nil",
-	longdes: "Bans the user given.",
-	mentionedperm: "BAN_MEMBERS",
-	category: "Moderation"
+	longdes: "Creates a ticket.",
+	mentionedperm: "N/A",
+	category: "Utility"
 	}};
