@@ -30,7 +30,16 @@ data.id++;
 fs.writeFile('./tickets.json', '{\n"id":' + data.id + "\n}", (err) => {
     if (!err) return;
     console.error(err)
-})
+  });
+ module.exports.help = {
+	name: "new",
+	usage: "new (reason)",
+	description: "nil",
+	longdes: "Make a ticket.",
+	mentionedperm: "N/A",
+	category: "Utility"
+};
+ 	}}
 
 } else if (args[0] === 'close') {
     if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.RichEmbed().setColor(Config.ticketcolor).setAuthor(message.author.tag, client.user.displayAvatarURL).setTimestamp().setDescription("You do not have permission to do this!"));
