@@ -28,12 +28,3 @@ if (isCommand(message, "new")) {
             });
         }).catch(console.error); // Send errors to console
     };
-
-module.exports.help = {
-	name: "newn",
-	usage: "new [reason]",
-	description: "nil",
-	longdes: "Creates a ticket.",
-	mentionedperm: "N/A",
-	category: "Utility"
-	}};
