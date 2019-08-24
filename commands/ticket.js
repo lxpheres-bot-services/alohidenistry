@@ -1,6 +1,6 @@
 const Config = require('../config.json')
 const data = require('../tickets.json')
-module.exports.run = async (client, message, args) => {
+module.exports.run = async (bot, message, args) => {
     const Discord = require('discord.js')
     const fs = require('fs')
 if (!args[0]) {
