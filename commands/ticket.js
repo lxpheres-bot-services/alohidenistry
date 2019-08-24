@@ -41,36 +41,4 @@ module.exports.help = {
 	category: "N/A"
 };
 
-} else if (args[0] === 'close') {
-    if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.RichEmbed().setColor(Config.ticketcolor).setAuthor(message.author.tag, client.user.displayAvatarURL).setTimestamp().setDescription("You do not have permission to do this!"));
-    if (message.channel.name.startsWith("ticket-")) {
-        message.channel.delete();
-    } else {
-        message.channel.send(new Discord.RichEmbed().setColor(Config.embedColor).setAuthor(message.author.tag, client.user.displayAvatarURL).setTimestamp().setDescription(message.author + ', that command can only be used in a ticket.'))
-        return
-    }
-    }
-    if (args[0] === 'remove') {
-        message.delete();
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.RichEmbed().setColor(Config.ticketcolor).setAuthor(message.author.tag, client.user.displayAvatarURL).setTimestamp().setDescription("You do not have permission to do this!"));
-        let c = message.channel;
-        let id = args[1];
-        let memberr = message.guild.members.get(id);
-        c.overwritePermissions(memberr, {
-            VIEW_CHANNEL: false
-        })
-        return;
-    }
-    if (args[0] === 'add') {
-        message.delete();
-        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send(new Discord.RichEmbed().setColor(Config.ticketcolor).setAuthor(message.author.tag, client.user.displayAvatarURL).setTimestamp().setDescription("You do not have permission to do this!"));
-        let c = message.channel;
-        let id = args[1];
-        let memberr = message.guild.members.get(id);
-        c.overwritePermissions(memberr, {
-            VIEW_CHANNEL: true
-        })
-        return;
-    }
-}
     
