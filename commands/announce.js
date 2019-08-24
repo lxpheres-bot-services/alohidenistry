@@ -3,7 +3,7 @@ const Discord = require("discord.js");
 module.exports.run = async (bot, message, args) => {
 	if (!message.member.hasPermission("ADMINISTRATOR")) return message.reply("You cannot run this command. You must be a SHR+!");
 	let embed = new Discord.RichEmbed()
-		.setTitle("Server Announcement")
+		.setTitle("TH | Server Announcement")
 		.setColor("#ffeb5c")
 		.setDescription(args.join(" "))
 		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
