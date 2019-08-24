@@ -36,4 +36,4 @@ module.exports.help = {
 	longdes: "Bans the user given.",
 	mentionedperm: "BAN_MEMBERS",
 	category: "Moderation"
-};
+	}};
