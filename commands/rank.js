@@ -9,8 +9,8 @@ module.exports.run = async (bot, message, args) => {
 				if (currentRank === 0) return message.reply("This person isn't in the group!").catch(() => bot.safeSend(message, module.exports.help.name));
 				var rank = args.splice(1, args.length).join(" ");
 				if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
-				if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Chief Public Relations Officer").Rank || currentRank > roles.find((role) => role.Name === "Chief Public Relations Officer").Rank) return message.reply("You cannot change the rank of a CPRO, or anyone above the rank of one!.").catch(() => bot.safeSend(message, module.exports.help.name));
-				rbx.setRank(4090890, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
+				if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Head of Directors").Rank || currentRank > roles.find((role) => role.Name === "Head of Directors").Rank) return message.reply("You cannot change the rank of a HoD, or anyone above the rank of one!.").catch(() => bot.safeSend(message, module.exports.help.name));
+				rbx.setRank(4931059, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
 					message.reply(`Ranked \`${args[0]}\` to \`${rank}\``).catch(() => bot.safeSend(message, module.exports.help.name));
 					//await bot.channels.get("539898170705051651").send(`Alert! Since ${message.author.tag} requested, I have ranked \`${args[0]}\` to \`${rank}\`!`);
 				}).catch((e) => {
