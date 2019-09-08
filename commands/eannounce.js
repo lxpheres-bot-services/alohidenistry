@@ -18,6 +18,6 @@ module.exports.help = {
 	usage: "eannounce <txt>",
 	description: "Announcement command using everyone.",
 	longdes: "An announcement command using everyone.",
-	mentionedperm: "MANAGE_ROLES",
+	mentionedperm: "MANAGE_SERVER",
 	category: "Utility"
 };
