@@ -7,7 +7,6 @@ module.exports.run = async (bot, message) => {
 		let timestamp = new Date();
 		await console.log("I have successfully rebooted!");
 		await message.channel.send("All done, I have rebooted my systems!");
-		await bot.guilds.get("503074702902689803").channels.get("506303108998234133").send(`:robot: I have been rebooted by **${message.author.tag}** at **${timestamp}**.`);
 	}
 };
 
