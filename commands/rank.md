@@ -26,7 +26,7 @@ module.exports.run = async (bot, message, args) => {
 			message.reply("Couldn't find this user.").catch(() => bot.safeSend(message, module.exports.help.name));
 		});
 	}).catch((e) => {
-		console.warn(e);
+0console.warn(e);
 		message.reply("Couldn't fetch group ranks.").catch(() => bot.safeSend(message, module.exports.help.name));
 	});
 },
