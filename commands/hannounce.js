@@ -6,7 +6,8 @@ module.exports.run = async (bot, message, args) => {
 		.setTitle("Alohi Dentistry Server Announcement")
 		.setColor("#ffeb5c")
 		.setDescription(args.join(" "))
-		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL);
+		.setFooter(`Announcement made by ${message.author.tag}`, message.author.displayAvatarURL)
+		.setThumbnail("https://cdn.discordapp.com/attachments/620275379520667648/620373417631154221/b159c0540d79a99026f2e154ff447e58.png");
 	bot.channels.get("579722437437030422").send("@here", {embed: embed}).then(() => {
 		message.reply("Message sent!");
 	}).catch(() => {
