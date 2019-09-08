@@ -33,7 +33,7 @@ module.exports.run = async (bot, message, args) => {
 						icon_url: bot.user.avatarURL
 					},
 					title: "Commands",
-					description: "Commands for TH | Server Bot",
+					description: "Commands for Alohi Dentistry Server Bot",
 					fields: [{
 						name: "Name",
 						value: props.help.name,
@@ -63,7 +63,7 @@ module.exports.run = async (bot, message, args) => {
 					timestamp: new Date(),
 					footer: {
 						icon_url: bot.user.avatarURL,
-						text: "TH | Server Bot"
+						text: "Alohi Dentistry Server Bot"
 					}
 				}
 			});
@@ -78,14 +78,14 @@ module.exports.run = async (bot, message, args) => {
 					icon_url: bot.user.avatarURL
 				},
 				title: "Commands",
-				description: "Commands TH | Server Bot",
+				description: "Commands for Alohi Dentistry Server Bot",
 				fields: [{
 					name: "Moderation",
 					value: "`;ban` - Bans the user given. \n `;unban` - Revokes a ban. \n`;kick` - Kicks the user given. \n`;warn` - Warns the user given. \n`;purge` Purges the amount of messages given."
 				},
 				{
 					name: "Utility",
-					value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running. \n`;say` - Sends a message as a bot. \n`;announce` - Command used to announce events. \n`;hannounce` - Announcement with @here ping. \n`;eannounce` - Announcement with @everyone ping."
+					value: "`;ping` - Replies with the bots ping. \n`;help` - Replies with this menu. \n`;up` - Replies with how long the bot has been up and running."
 				},
 				{
 					name: "Developer Commands",
@@ -99,7 +99,7 @@ module.exports.run = async (bot, message, args) => {
 				timestamp: new Date(),
 				footer: {
 					icon_url: bot.user.avatarURL,
-					text: "TH | Server Bot"
+					text: "Alohi Dentistry Server Bot"
 				}
 			}
 		});
