@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 
 module.exports.run = async (bot, message, args) => {
-	if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply("You cannot run this command. You must be a HR+!");
+	if (!message.member.hasPermission("MANAGE_GUILD")) return message.reply("You cannot run this command. You must be a SR+!");
 	let embed = new Discord.RichEmbed()
 		.setTitle("Alohi Dentistry Server Announcement")
 		.setColor("#ffeb5c")
