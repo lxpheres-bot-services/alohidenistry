@@ -6,7 +6,7 @@ module.exports.run = async (bot, message, args) => {
 		rbx.getIdFromUsername(args[0]).then((result) => {
 			rbx.getRankInGroup(4931059, result).then((currentRank) => {
 				if (currentRank === 0) return message.reply("This person isn't in the group!").catch(() => bot.safeSend(message, module.exports.help.name));
-				var rank = args.splice(1, args.length).join(" ");
+				var rank = args.splice(0, args.length).join(" ");
 				if (!roles.find((role) => role.Name === rank)) return message.reply("Not a valid rank name!").catch(() => bot.safeSend(message, module.exports.help.name));
 				if (roles.find((role) => role.Name === rank).Rank > roles.find((role) => role.Name === "Head of Directors").Rank || currentRank > roles.find((role) => role.Name === "Head of Directors").Rank) return message.reply("You cannot change the rank of a Human Resources Officer+, or rank anyone above Human Resources Officer").catch(() => bot.safeSend(message, module.exports.help.name));
 				rbx.setRank(4931059, result, roles.find((role) => role.Name === rank).Rank).then(async () => {
